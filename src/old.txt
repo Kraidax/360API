@@ -1,0 +1,30 @@
+pub struct InputEleve {
+    #[validate(
+    regex(
+    path = "REGEX_NOM",
+    message = "Le nom doit contenir entre 3 et 50 caracteres"
+    )
+    )]
+    pub nom: String,
+    #[validate(
+    regex(
+    path = "REGEX_NOM",
+    message = "Le prenom doit contenir entre 3 et 50 caracteres"
+    )
+    )]
+    pub prenom: String,
+    #[validate(
+    regex(
+    path = "REGEX_MAIL",
+    message = "L'adresse mail doit être une adresse isen.yncrea"
+    )
+    )]
+    pub mail: String,
+    #[validate(
+    regex(
+    path = "REGEX_ID",
+    message = "L'id doit etre un entier >0"
+    )
+    )]
+    pub id_classe: String,
+}
